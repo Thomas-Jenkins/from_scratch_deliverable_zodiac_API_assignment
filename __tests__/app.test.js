@@ -22,6 +22,16 @@ describe('zodiac routes', () => {
     };
     expect(res.body).toEqual(aquarius);
   });
+
+  it('/horoscopes/:sign should return a horoscope related to the sign', async () => {
+    const res = await request(app).get('/horoscopes/aquarius');
+    const aquarius = {
+      'id': '1',
+      'sign': 'aquarius',
+      'horoscope': 'Your days are likely to become darker as the world around you slowly falls into a quiet winter, avoid the color green. Lucky numbers: 5, 8, 19, 42, 90'
+    };
+    expect(res.body).toEqual(aquarius);
+  });
 });
 
 
