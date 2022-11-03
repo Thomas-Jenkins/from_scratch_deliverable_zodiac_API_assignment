@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../lib/app');
 
 const { zodiacs } = require('../lib/zodiac-data');
-const { horoscopes } = require('../lib/horoscopes-data');
+// const { horoscopes } = require('../lib/horoscopes-data');
 
 describe('zodiac routes', () => {
   it('/zodiacs should return an array of zodiacs', async () => {
